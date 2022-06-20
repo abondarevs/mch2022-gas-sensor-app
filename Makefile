@@ -1,4 +1,4 @@
-PORT ?= /dev/ttyACM0
+PORT ?= /dev/tty.usbmodem101
 BUILDDIR ?= build
 IDF_PATH ?= $(shell pwd)/esp-idf
 IDF_EXPORT_QUIET ?= 0

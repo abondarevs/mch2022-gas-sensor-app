@@ -1,6 +1,10 @@
-# MCH2022 template app
+# Gas sensor app
 
-This repository contains a template app for the MCH2022 badge.
+This repository contains an app for the gas sensor on the [MCH2022 badge](https://github.com/badgeteam/mch2022-badge-hardware).
+
+The app displays temperature, relative humidity, pressure and gas sensor resistance.
+
+The gas resistance is displayed for hardcoded 320C target heater temperature for the duration of 148ms.
 
 ## License
 
@@ -14,6 +18,7 @@ Source code included as submodules is licensed separately, please check the foll
 | components/appfs            | THE BEER-WARE LICENSE Revision 42 | Jeroen Domburg <jeroen@spritesmods.com>                |
 | components/bus-i2c          | MIT                               | Nicolai Electronics                                    |
 | components/i2c-bno055       | MIT                               | Nicolai Electronics                                    |
+| components/i2c-bme680       | MIT                               | Andrejs Bondarevs                                      |
 | components/mch2022-rp2040   | MIT                               | Renze Nicolai                                          |
 | components/pax-graphics     | MIT                               | Julian Scheffers                                       |
 | components/pax-keyboard     | MIT                               | Julian Scheffers                                       |
@@ -24,8 +29,8 @@ Source code included as submodules is licensed separately, please check the foll
 
 ## How to make
 ```sh
-git clone --recursive https://github.com/badgeteam/mch2022-template-app
-cd mch2022-template-app
+git clone --recursive https://github.com/abondarevs/mch2022-gas-sensor-app.git
+cd mch2022-gas-sensor-app
 make prepare
 make
 ```
