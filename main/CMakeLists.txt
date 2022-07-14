@@ -8,6 +8,7 @@ idf_component_register(
         "screens/live.c"
         "screens/settings_heat_setpoint.c"
         "screens/settings_heat_wait.c"
+        "gui/gui_text.c"
     INCLUDE_DIRS
-        "." "include"
+        "." "include" "gui"
 )
