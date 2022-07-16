@@ -24,8 +24,8 @@ void screen_settings_heater_wait(screen_t* screen)  {
                         "dependends on the time duration it is\n"
                         "kept at the target temperature.\n"
                         "It can be set from 0ms to 4096ms.\n"
-                        "Zero means heater is always on. \n"
-                        "Use joystick to change and A to apply.\n";
+                        "Zero means heater is always on. Use \n"
+                        "joystick to change, press A to apply.\n";
 
     rp2040_input_message_t message;
 

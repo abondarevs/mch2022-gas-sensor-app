@@ -21,12 +21,12 @@ void screen_settings_heater_setpoint(screen_t* screen) {
     char str_setpoint_unit[] = "C";
     char str_setpoint_val_fmt[] = "%.0f";
     char str_info[] =   "The gas sensor is made of SnO2 mate-\n"
-                        "rial. The material electrical resistance\n"
+                        "rial. The SnO2 electrical resistance\n"
                         "changes when in contact with an air\n"
                         "pollutant. The resistance response\n"
-                        "dependends on the material tempera-\n"
-                        "ture, which can be set from 30 to 500C.\n"
-                        "Use joystick to change and A to apply.";
+                        "dependends on the SnO2 temperature\n"
+                        "which can be set from 30 to 500C. Use\n"
+                        "joystick to change, press A to apply.";
 
     rp2040_input_message_t message;
 
