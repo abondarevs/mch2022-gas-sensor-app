@@ -4,7 +4,7 @@ This repository contains an app for the gas sensor on the [MCH2022 badge](https:
 
 The app displays temperature, relative humidity, pressure and gas sensor resistance.
 
-The gas resistance is displayed for hardcoded 320C target heater temperature for the duration of 148ms.
+The app gives the possibbility to configure gas sensor heater set-point and delay.
 
 ## License
 
