@@ -7,6 +7,7 @@ void gui_txt_draw(pax_buf_t* pax_buffer, gui_txt_t * txt)
     float text_width = 0.0;
     float text_max_height = 0.0;
     float x = 0.0;
+    float box_height = txt->height;
 
     // Calculate the total width of the text and the maximum height of a line
     for (uint32_t i = 0; i < txt->txt_num; i++)
@@ -26,6 +27,12 @@ void gui_txt_draw(pax_buf_t* pax_buffer, gui_txt_t * txt)
     } else if (txt->halign == GUI_TEXT_ALIGN_CENTER) {
         x = txt->x + txt->width / 2 - text_width / 2;
     }
+
+    if (txt->height == 0.0) {
+        box_height = text_max_height;
+    }
+
+    pax_draw_rect(pax_buffer, txt->bg_color, txt->x, txt->y, txt->width, box_height);
 
     // Draw the text to the buffer
     for (uint32_t i = 0; i < txt->txt_num; i++)

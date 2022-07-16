@@ -30,7 +30,7 @@ void screen_live(screen_t* screen) {
     rp2040_input_message_t message;
 
     pax_col_t bg_color = pax_col_hsv(0, 0 /*saturation*/, 255 /*brighness*/);
-    pax_col_t fg_color = pax_col_hsv(0, 0 /*saturation*/, 0 /*brighness*/);
+    pax_col_t fg_color = pax_col_hsv(0, 0 /*saturation*/, 0   /*brighness*/);
 
     pax_font_t* font_values = (pax_font_t*)pax_get_font("saira condensed");
     pax_font_t* font_lbl = (pax_font_t*)pax_get_font("sky mono");
@@ -50,6 +50,8 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 5,
         .width = 160,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = &txt_temp_lbl_p,
         .txt_num = 1,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -70,6 +72,8 @@ void screen_live(screen_t* screen) {
         .x = 160,
         .y = 5,
         .width = 160,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = &txt_hum_lbl_p,
         .txt_num = 1,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -90,6 +94,7 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 70,
         .width = 320,
+        .height = 0,
         .txt = &txt_pres_lbl_p,
         .txt_num = 1,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -110,6 +115,8 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 140,
         .width = 320,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = &txt_gas_lbl_p,
         .txt_num = 1,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -140,6 +147,8 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 20,
         .width = 160,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = txt_temp_p,
         .txt_num = 2,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -170,6 +179,8 @@ void screen_live(screen_t* screen) {
         .x = 160,
         .y = 20,
         .width = 160,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = txt_hum_p,
         .txt_num = 2,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -200,6 +211,8 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 85,
         .width = 320,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = txt_pres_p,
         .txt_num = 2,
         .halign = GUI_TEXT_ALIGN_CENTER,
@@ -230,6 +243,8 @@ void screen_live(screen_t* screen) {
         .x = 0,
         .y = 155,
         .width = 320,
+        .height = 0,
+        .bg_color = bg_color,
         .txt = txt_gas_p,
         .txt_num = 2,
         .halign = GUI_TEXT_ALIGN_CENTER,
